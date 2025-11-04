@@ -2,8 +2,9 @@
 def calcular_media(lista):
     # TODO: implementar a soma dos elementos e dividir pelo tamanho da lista
     media = 0
-    for i in range(lista):
-        media = media + lista[i]
+    for i in range(4):
+        media = media + int(lista[i])
+    return media / 4
 
 
 # Função para calcular a mediana
@@ -22,14 +23,16 @@ def calcular_moda(lista):
 
 def main():
     try:
-        numeros = [10, 20, 20, 30, 40, 40, 40, 50]
+        numeros = ["10", "20", "20", "30"]
 
+        # numeros = [10, 20, 20, 30, 40, 40, 40, 50]
         print("📊 Calculadora Estatística")
-        print(f"Lista de números: {numeros}")
+        calcular_media(numeros)
+        # print(numeros)
+        # print(f"Lista de números: {numeros}")
         print(f"Média: {calcular_media(numeros)}")
-        print(f"Mediana: {calcular_mediana(numeros)}")
-        print(f"Moda: {calcular_moda(numeros)}")
-
+        # print(f"Mediana: {calcular_mediana(numeros)}")
+        # print(f"Moda: {calcular_moda(numeros)}")
     except Exception as e:
         print(f"⚠️ Ocorreu um erro: {e}")
 
